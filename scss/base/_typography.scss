@@ -16,7 +16,7 @@
 @mixin big-blue {
    font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
    color: $Dodger-Blue;
-   font-size: 45px; // 77px
+   font-size: 31px; // 77px
 
    @include tab-screen {
       font-size: 38px;
@@ -26,29 +26,25 @@
 @mixin meduim-blue {
    font-family: 'Avenir Medium', 'Arial Black', sans-serif;
    color: $Dodger-Blue;
-   font-size: 35px; // 52px
+   font-size: 26px; // 52px
 }
 
 @mixin big-black {
    font-family: 'Avenir Black', 'Arial Black', sans-serif;
    color: $Black;
-   font-size: 48px; // 97px
-
-   @include tab-screen {
-      font-size: 40px;
-   }
+   font-size: 31px; // 97px
 }
 
 @mixin medium-black {
    font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
    color: $Black;
-   font-size: 38px; // 61px
+   font-size: 31px; // 61px
 }
 
 @mixin samll-black {
    font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
    color: $Black;
-   font-size: 28px; // 49px
+   font-size: 26px; // 49px
 }
 
 @mixin black {
@@ -222,24 +218,51 @@
       background-color: #1FB2FF;
    }
 
-   &:hover > p {
+   &:hover p {
       color: $Dodger-Blue-Light;
       font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
    }
 
-   &:hover > h2 {
+   &:hover h2 {
       color: $White;
    }
 
-   &:hover > h6 {
+   &:hover h6 {
       color: $Black;
    }
 
-   &:hover > a {
-      background-color: $Dodger-Blue-Light;
+   &:hover a {
+      background-color: $Dodger-Blue;
    }
 }
 
+.bg-blue {
+   transition: ease-in-out .4s;
+   padding-top: 20px;
+   padding-bottom: 15px;
+
+   &:hover {
+      background-color: #1FB2FF;
+   }
+
+   &:hover h2,
+   &:hover h3,
+   &:hover h4,
+   &:hover h5, 
+   &:hover h6 {
+      color: $White !important;
+   }
+
+   &:hover p {
+      color: #006DA6;
+   }
+
+   &:hover button,
+   &:hover a {
+      background-color: $White;
+      color: $Dodger-Blue;
+   }
+}
 
 .copy-right {
    p {

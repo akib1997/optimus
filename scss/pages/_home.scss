@@ -1,13 +1,13 @@
 
 .introducing {
-   margin-top: 100px;
+   margin-top: 250px;
 
    @include medium-screen {
-      margin-top: 70px;
+      margin-top: 200px;
    }
 
    @include tab-screen {
-      margin-top: 50px;
+      margin-top: 150px;
    }
 
    p {
@@ -216,7 +216,8 @@
    }
 
    h6 {
-      font-size: 25px;
+      font-size: 22px;
+      color: $Dodger-Blue;
       @include heavy;
    }
 
@@ -311,7 +312,6 @@
    }
 
    .optimus-talemed {
-      background-color: $Dodger-Blue;
       padding: 20px 15px;
       position: relative;
 
@@ -323,28 +323,16 @@
          margin: 0 auto;
       }
 
-      h2 {
-         color: $White;
-      }
-
       h6 {
          font-size: 25px;
          @include heavy;
       }
 
-      p:first-child {
-         color: $Dodger-Blue-Light;
-         @include heavy;
-      }
       p:last-child {
          color: rgba(0, 0, 0, .38);
+         @include medium;
       }
    }
-}
-
-.slider-area {
-   transition: fade-in .3s;
-   // display: none;
 }
 
 .optimus-do {

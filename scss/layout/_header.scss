@@ -1,15 +1,29 @@
 @import './../base/fonts';
+
+
 .header {
-   position: relative;
-   padding: 60px 0 50px;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 99999;
+   transition: top 0.5s ease-in-out;
+   padding-top: 40px;
 
    @include tab-screen {
-      padding: 40px 0;
+       padding-top: 20px;
    }
 
    @include mobile-screen {
       padding: 20px 0;
    }
+}
+
+.nav-up {
+   top: -140px;
+
+   @include tab-screen {
+      padding-top: -130px;
+  }
 }
 
 .site-title {

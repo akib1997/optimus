@@ -1,7 +1,5 @@
 
-.plans-page {
-   position: relative;
-   overflow: hidden;
+.top-circle {
 
    &::before {
       @include circle(400px, 400px);
@@ -12,11 +10,18 @@
 
 .your-organization {
    position: relative;
+   z-index: 9999;
    overflow: hidden;
    padding: 20px 0 300px;
+   margin-top: 170px;
+
+   @include medium-screen {
+      margin-top: 150px;
+   }
 
    @include tab-screen {
       padding: 20px 0 100px;
+      margin-top: 150px;
    }
 
    @include mobile-screen {
@@ -34,12 +39,12 @@
    }
 
    h2 {
-      font-size: 40px;
+      font-size: 31px;
       color: $Dodger-Blue;
       margin-bottom: 40px;
 
       @include tab-screen {
-         font-size: 32px;
+         font-size: 26px;
       }
    }
 
@@ -97,10 +102,10 @@
    }
 
    h3 {
-      font-size: 45px;
+      font-size: 31px;
 
       @include tab-screen {
-         font-size: 35px;
+         font-size: 26px;
       }
 
       span {
@@ -139,24 +144,24 @@
    }
 
    p {
-      font-size: 26px;
+      font-size: 21px;
    }
 
    .advanced,
    .basic {
 
       p {
-         font-size: 24px;
+         font-size: 21px;
          color: $Black;
          margin-bottom: 0;
       }
 
       li {
-         font-size: 28px;
+         font-size: 26px;
          margin-bottom: 10px;
 
          @include medium-screen {
-            font-size: 25px;
+            font-size: 22px;
          }
       }
    }
@@ -167,7 +172,7 @@
 
    &::before {
       top: 55%;
-      left: 12%;
+      left: 2%;
    }
 }
 
@@ -241,23 +246,23 @@
 }
 
 .update {
-   background-color: $Dodger-Blue;
+   // background-color: $Dodger-Blue;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   padding: 20px 15px;
+   // padding: 20px 15px;
 
    @include medium-screen {
       margin-top: 30px;
    }
 
    h5 {
-      color: $White;
+      // color: $White;
       font-size: 26px;
    }
 
    p {
-      color: #006DA6;
+      // color: #006DA6;
       font-size: 20px;
    }
 }
