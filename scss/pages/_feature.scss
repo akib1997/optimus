@@ -1,0 +1,70 @@
+
+.features {
+   position: relative;
+   overflow: hidden;
+   padding: 50px 0;
+
+   h3 {
+      @include meduim-blue;
+   }
+
+   h2 {
+      @include big-black;
+   }
+
+   h4 {
+      @include medium-black;
+   }
+
+   h5 {
+      @include samll-black;
+   }
+
+   .text-black {
+      color: $Black;
+   }
+
+   p {
+      font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+      color: $Grey;
+
+      span {
+         @include text-black-light;
+      }
+   }
+
+   .button {
+      margin-left: -25px;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile-screen {
+         margin-left: -10px;
+      }
+      
+      p {
+         color: $White;
+         margin-bottom: 0;
+      }
+
+      span {
+         font-family: 'Avenir Black', 'Arial Black', sans-serif;
+         color: inherit;
+      }
+   }
+
+   &::before,
+   &::after {
+      @include circle (150px, 150px);
+   }
+
+   &::before {
+      top: 25%;
+      left: calc(100px - 150px);
+   }
+
+   &::after {
+      top:10%;
+      right: calc( 100px - 150px);
+   }
+}

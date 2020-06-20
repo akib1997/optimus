@@ -1,0 +1,476 @@
+
+.introducing {
+   margin-top: 100px;
+
+   @include medium-screen {
+      margin-top: 70px;
+   }
+
+   @include tab-screen {
+      margin-top: 50px;
+   }
+
+   p {
+      @include medium;
+   }
+
+   h3 {
+      font-size: 31px;
+      white-space: pre;
+
+      @include mobile-screen {
+         font-size: 28px;
+         white-space: pre-wrap;
+      }
+   }
+
+   .animated-text {
+      position: relative;
+
+      h3 {
+         color: $Dodger-Blue-Light;
+      }
+
+      &::after {
+         @include circle(150px, 150px);
+         left: 17%;
+         bottom: -42%;
+         z-index: -9;
+      }
+   }
+}
+
+.help-here {
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 80px;
+
+   @include large-screen {
+      margin-bottom: 220px;
+   }
+
+   @include medium-screen {
+      margin-bottom: 60px;
+   }
+
+   @include tab-screen {
+      margin-bottom: 40px;
+      padding: 0 15px;
+   }
+
+   h2 {
+      font-size: 31px;
+
+      @include tab-screen {
+         margin-top: 26px;
+      }
+   }
+
+   p {
+      @include medium;
+   }
+
+   img {
+      max-height: 550px;
+
+      @include tab-screen {
+         margin: 0 auto;
+         display: block;
+         max-height: 400px;
+      }
+   }
+
+   .details {
+      
+      h3 {
+         font-size: 31px;
+         color: $Dodger-Blue-Light;
+      }
+   }
+   
+
+   &::before {
+      content: url('./../images/image-4.png');
+      position: absolute;
+      z-index: -9;
+      bottom: 8%;
+      right: 5%;
+   }
+
+   &::after {
+      @include circle(500px, 500px);
+      right: calc(250px - 500px);
+      top: 0;
+
+
+      @include medium-screen {
+         @include circle(200px, 200px);
+         right: calc(100px - 200px);
+      }
+
+      @include tab-screen {
+         @include circle(100px, 100px);
+         right: calc(50px - 100px);
+      }
+   }
+}
+
+.optimus-can {
+   position: relative;
+   overflow: hidden;
+   padding: 100px 0;
+
+   @include medium-screen {
+      padding: 80px 0;
+   }
+
+   @include tab-screen {
+      padding: 50px 0;
+   }
+
+   &::after,
+   &::before {
+      @include circle(150px, 150px);
+   }
+
+   &::before {
+      left: -75px;
+      top: -75px;
+
+      @include tab-screen {
+         width: 50px;
+         height: 50px;
+         top: 0;
+         left: calc(25px - 50px);
+      }
+   }
+
+   &::after{
+      right: -20px;
+      top: 40%;
+
+      @include tab-screen {
+
+      }
+   }
+
+   .row:not(:last-child) {
+      @include tab-screen {
+         margin-bottom: 30px;
+      }
+   }
+
+   img {
+      max-height: 300px;
+      height: 100%;
+      width: 100%;
+
+      @include tab-screen {
+         margin-bottom: 30px;
+         max-height: 400px;
+      }
+
+      @include mobile-screen {
+         max-width: 350px;
+      }
+   }
+
+   h4 {
+      font-size: 26px;
+      color: $Dodger-Blue;
+      @include heavy;
+   }
+
+   h3 {
+      font-size: 31px;
+      @include heavy;
+   }
+
+   p {
+      font-size: 21px;
+      @include medium;
+   }
+
+   a {
+      margin-left: -15px;
+      margin-top: 30px;
+
+      @include tab-screen {
+         margin-bottom: 30px;
+         margin-left: -5px;
+         margin-top: 10px;
+      }
+   }
+
+}
+
+.telemad {
+   position: relative;
+   background-color: $Dodger-Blue;
+   padding: 40px 0;
+   overflow: hidden;
+
+   h3 {
+      font-size: 31px;
+      @include heavy;
+   }
+
+   h6 {
+      font-size: 25px;
+      @include heavy;
+   }
+
+   p {
+      @include medium;
+      color: #333333;
+
+      @include large-screen {
+         width: 75%;
+      }
+   }
+
+
+   a {
+      position: absolute;
+      bottom: -16px;
+      right: 0;
+      background-color: $Dodger-Blue;
+      color: $White;
+      padding: 7px 25px;
+      z-index: 5;
+
+      @include small-text;
+   }
+
+   &::after {
+      content: 'Alert';
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      color: #51C3FF;
+      font-size: 40px;
+      z-index: 1;
+   }
+}
+
+.find-app {
+   padding: 100px 0;
+   position: relative;
+   overflow: hidden;
+
+   @include medium-screen {
+      padding: 80px 0;
+   }
+
+   @include tab-screen {
+      padding: 50px 0;
+   }
+
+   &::before {
+      @include circle(120px, 120px);
+      left: calc(60px - 120px);
+      top: 40%;
+   }
+
+   &::after {
+      @include circle(90px, 90px);
+      right: calc(45px - 90px);
+      top: 55%;
+   }
+
+   h5 {
+      font-size: 26px;
+      color: $Dodger-Blue;
+      @include heavy;
+   }
+
+   p {
+      margin-bottom: 0;
+      font-size: 21px;
+      @include medium;
+   }
+
+   h2 {
+      font-size: 31px;
+      margin-bottom: 30px;
+   }
+
+   ul {
+
+      li {
+         font-size: 21px;
+         @include medium;
+         margin-bottom: 10px;
+      }
+   }
+
+   .col-md-4 {
+      @include tab-screen {
+         margin-bottom: 20px;
+      }
+   }
+
+   .optimus-talemed {
+      background-color: $Dodger-Blue;
+      padding: 20px 15px;
+      position: relative;
+
+      &::after {
+         @include circle(150px, 150px);
+         bottom: -15rem;
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+      }
+
+      h2 {
+         color: $White;
+      }
+
+      h6 {
+         font-size: 25px;
+         @include heavy;
+      }
+
+      p:first-child {
+         color: $Dodger-Blue-Light;
+         @include heavy;
+      }
+      p:last-child {
+         color: rgba(0, 0, 0, .38);
+      }
+   }
+}
+
+.slider-area {
+   transition: fade-in .3s;
+   // display: none;
+}
+
+.optimus-do {
+   position: relative;
+   overflow: hidden;
+   padding: 80px 0 100px;
+
+   @include medium-screen {
+      padding: 70px 0;
+   }
+
+   @include tab-screen {
+      padding: 40px 0;
+   }
+
+   h3 {
+      color: $Dodger-Blue-Light;
+      font-size: 31px;
+   }
+}
+.waves {
+   position: relative;
+   overflow: hidden;
+
+   .blue-image {
+      position: absolute;
+      top: 0;
+      left: 20%;
+   }
+
+   .circle {
+      position: absolute;
+      top: 0;
+      left: 80%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #faf7f2;
+   }
+}
+
+.expanding-network {
+   background-color: #faf7f2;
+   padding: 50px 0 30px;
+   position: relative;
+
+   h5 {
+      color: #E6D7BD;
+      font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+      font-size: 31px;
+   }
+
+   img {
+      width: 200px;
+      display: block;
+      object-fit: contain;
+
+      @include tab-screen {
+         width: 100px;
+      }
+   }
+}
+
+.form {
+   margin-top: 100px;
+
+   @include tab-screen {
+      margin-top: 50px;
+   }
+
+   h4 {
+      color: $Dodger-Blue-Light;
+      font-size: 26px;
+      line-height: 1.4;
+      font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   }
+
+   h3 {
+      color: #E6D7BD;
+      font-size: 31px;
+      font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   }
+
+   textarea,
+   input {
+      border: 0;
+      font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+      font-size: 22px;
+      padding: 5px 15px;
+
+      &::-webkit-input-placeholder { 
+         color: #979797;
+      }
+       
+      &:-ms-input-placeholder {
+         color: #979797;
+      }
+       
+      &::placeholder {
+         color: #979797;
+      }
+
+      &:active {
+         color: $Black;
+      }
+   }
+}
+
+.reach-us {
+   margin: 200px 0 300px;
+
+   @include large-screen {
+      margin-top: 300px;
+   }
+
+   @include tab-screen {
+      margin: 100px 0;
+   }
+
+   @include mobile-screen {
+      margin: 50px 0 0;
+   }
+
+   h4 {
+      color: #E6D7BD;
+      font-size: 31px;
+      font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   }
+}

@@ -1,0 +1,36 @@
+@import './../base/fonts';
+.header {
+   position: relative;
+   padding: 60px 0 50px;
+
+   @include tab-screen {
+      padding: 40px 0;
+   }
+
+   @include mobile-screen {
+      padding: 20px 0;
+   }
+}
+
+.site-title {
+
+   h2 {
+      color: $Dodger-Blue;
+      font-size: 31px;
+      font-weight: 500;
+
+      @include tab-screen {
+         font-size: 25px;
+      }
+
+      span {
+         color: $Dodger-Blue-Light;
+         font-size: 26px;
+         text-align: right;
+
+         @include tab-screen {
+            font-size: 22px;
+         }
+      }
+   }
+}

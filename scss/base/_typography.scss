@@ -1,0 +1,254 @@
+
+@mixin small-text {
+   font-size: 18px;
+   font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+}
+
+@mixin large-text {
+   font-size: 21px;
+   font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+}
+
+@mixin text-black-light {
+   color: $Black_Light;
+}
+
+@mixin big-blue {
+   font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   color: $Dodger-Blue;
+   font-size: 45px; // 77px
+
+   @include tab-screen {
+      font-size: 38px;
+   }
+}
+
+@mixin meduim-blue {
+   font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+   color: $Dodger-Blue;
+   font-size: 35px; // 52px
+}
+
+@mixin big-black {
+   font-family: 'Avenir Black', 'Arial Black', sans-serif;
+   color: $Black;
+   font-size: 48px; // 97px
+
+   @include tab-screen {
+      font-size: 40px;
+   }
+}
+
+@mixin medium-black {
+   font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   color: $Black;
+   font-size: 38px; // 61px
+}
+
+@mixin samll-black {
+   font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   color: $Black;
+   font-size: 28px; // 49px
+}
+
+@mixin black {
+   font-family: 'Avenir Black', 'Arial Black', sans-serif;
+}
+
+@mixin medium {
+   font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+}
+
+@mixin heavy {
+   font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+}
+
+@mixin book {
+   font-family: 'Avenir Book', 'Arial Black', sans-serif;
+}
+
+.button {
+   background-color: $Dodger-Blue;
+   color: $White;
+   padding: 4px 25px;
+   border-radius: 20px;
+   font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+   transition: all .3s;
+
+   &:hover {
+      background-color: $Dodger-Blue-Light;
+   }
+}
+
+.large-header {
+   font-size: 31px;
+}
+
+.small-header {
+   font-size: 26px;
+}
+
+.large-text {
+   font-size: 21px;
+}
+
+.small-text {
+   font-size: 18px;
+   font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+}
+
+.text-black {
+   color: $Black;
+}
+
+.text-black-light {
+   color: $Black_Light;
+}
+
+.text-dodger-blue {
+   color: $Dodger-Blue-Light;
+}
+
+.text-grey {
+   color: $Grey;
+}
+
+.plus {
+   &::after,
+   &::before {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 20px;
+      background-color: $Dodger-Blue-Light;
+      right: 10px;
+      top: 10px;
+   }
+
+   &::before {
+      font-family: unset;
+   }
+
+   &::after {
+      transform: rotate(90deg);
+   }
+}
+
+.box {
+   box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.1);
+   padding: 30px;
+   border-radius: 20px;
+   width: 100%;
+
+   @include tab-screen {
+      margin-bottom: 30px;
+   }
+
+   &-image {
+      max-width: 50%;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+   }
+
+   p {
+      margin-bottom: 0;
+      font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+      font-size: 22px;
+      color: $Black;
+   }
+
+   h4 {
+      font-family: 'Avenir Black', 'Arial Black', sans-serif;
+      font-size: 31px;
+      color: $Black;
+   }
+}
+
+.location-box {
+   position: relative;
+   box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);
+   padding: 60px 30px 30px 30px;
+   border-radius: 10px;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   background-color: $White;
+   color: $Black;
+
+   @include tab-screen {
+      margin-bottom: 70px;
+      padding: 40px 20px 20px 20px;
+      height: 350px;
+   }
+
+   &::after {
+      content: '\f3c5';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      top: -55px;
+      right: 25px;
+      font-size: 70px;
+      color: #1FB2FF;
+   }
+
+   h6 {
+      font-size: 31px;
+      font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   }
+
+   p {
+      @include small-text;
+      font-family: 'Avenir Medium', 'Arial Black', sans-serif;
+   }
+
+   .phone {
+      margin-top: auto;
+      color: $Black;
+      @include large-text;
+      font-family: 'Avenir Book', 'Arial Black', sans-serif;
+   }
+}
+
+.app-list {
+   transition: all .3s;
+   margin-left: -15px;
+   padding-left: 15px;
+   padding-top: 20px;
+   padding-bottom: 15px;
+
+   &:hover {
+      background-color: #1FB2FF;
+   }
+
+   &:hover > p {
+      color: $Dodger-Blue-Light;
+      font-family: 'Avenir Heavy', 'Arial Black', sans-serif;
+   }
+
+   &:hover > h2 {
+      color: $White;
+   }
+
+   &:hover > h6 {
+      color: $Black;
+   }
+
+   &:hover > a {
+      background-color: $Dodger-Blue-Light;
+   }
+}
+
+
+.copy-right {
+   p {
+      font-family: 'Avenir Book', 'Arial Black', sans-serif;
+      color: #C9B99E;
+      font-size: 25px;
+
+      @include mobile-screen {
+         font-size: 20px;
+      }
+   }
+}
