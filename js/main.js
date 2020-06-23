@@ -60,6 +60,10 @@ $(document).ready(function () {
       $('.slider-area').addClass('showSlider')
    })
 
+   $("a[href$='#']").click(function (e) {
+      e.preventDefault();
+   });
+
 
    // Get titles from the DOM
    var titleMain = $("#animatedHeading");
