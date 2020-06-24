@@ -23,7 +23,11 @@
 
    @include tab-screen {
       padding-top: -130px;
-  }
+   }
+
+   @include mobile-screen {
+      top: -250px;
+   }
 }
 
 .site-title {

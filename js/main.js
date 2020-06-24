@@ -49,6 +49,8 @@ $(document).ready(function () {
    $('.myslider').owlCarousel({
       margin: 10,
       items: 1,
+      autoplay: true,
+      loop: true,
       nav: false,
       dots: true,
       dotsData: true,
@@ -57,7 +59,7 @@ $(document).ready(function () {
    // Box click and Hide that and Showing Slider
    $('.box').click(function () {
       $('.optimus-do').hide();
-      $('.slider-area').addClass('showSlider')
+      $('.slider-area').addClass('showSlider');
    })
 
    $("a[href$='#']").click(function (e) {

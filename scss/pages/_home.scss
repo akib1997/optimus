@@ -314,6 +314,7 @@
    .optimus-talemed {
       padding: 20px 15px;
       position: relative;
+      overflow-y: hidden;
 
       &::after {
          @include circle(150px, 150px);
